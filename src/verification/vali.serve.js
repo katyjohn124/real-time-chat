@@ -1,7 +1,7 @@
 import axios from 'axios';
 // import { response } from 'express';
 //设置身份验证
-const API_URL = 'http://localhost:8080/api/auth';
+const API_URL = 'http://localhost:8080/api/auth/';
 
 class AuthService {
     //登录

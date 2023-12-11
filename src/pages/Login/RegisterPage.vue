@@ -70,7 +70,7 @@ export default {
 
         //初始化数据
         return {
-            sucessful: false,
+            successful: false,
             loading: false,
             message: '',
             schema,
@@ -92,12 +92,12 @@ export default {
             //带着数据点击登录后显示加载
             this.loading = true;
             this.message = '';
-            this.sucessful = false;
+            this.successful = false;
             this.$store.dispatch("vali/register", user)
                 .then((data) => {
                     this.loading = false;
                     this.message = data.message;
-                    this.sucessful = true;
+                    this.successful = true;
                 },
                     //这个错误处理有三种，首先是找服务器错误消息，二是一般消息，三是把错误消息转成字符串
                     (error) => {
