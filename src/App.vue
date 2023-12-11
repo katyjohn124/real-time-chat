@@ -1,16 +1,25 @@
 <template>
   <div id="app">
     <HomePage />
+    <LoginPage />
+    <RegisterPage />
+    <!-- <ProfilePage /> -->
   </div>
 </template>
 
 <script>
 import HomePage from './pages/Home/HomePage.vue'
+import LoginPage from './pages/Login/LoginPage.vue'
+import RegisterPage from './pages/Login/RegisterPage.vue'
+// import ProfilePage from './pages/Login/ProfilePage.vue'
 
 export default {
   name: 'App',
   components: {
-    HomePage
+    HomePage,
+    LoginPage,
+    RegisterPage,
+    // ProfilePage
   }
 }
 </script>
