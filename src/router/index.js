@@ -13,6 +13,10 @@ const BoardUser = () => import("../pages/BoardPage/BoardUser.vue")
 
 const routes = [
     {
+        path: '/',
+        redirect: '/register'
+    },
+    {
         path: '/home',
         name: 'home',
         component: HomePage
@@ -34,12 +38,12 @@ const routes = [
     },
     //以下是懒加载的路由部分
     {
-        path: '/boardadmin',
+        path: '/admin',
         name: 'boardadmin',
         component: BoardAdmin
     },
     {
-        path: '/boarduser',
+        path: '/user',
         name: 'boarduser',
         component: BoardUser
     },

@@ -5,7 +5,7 @@
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
           <router-link to="/home" class="nav-link">
-            <font-awesome-icon icon="home" /> 主页
+            <font-awesome-icon icon="home" /> 体验实时聊天吧！
           </router-link>
         </li>
         <li v-if="showAdminBoard" class="nav-item">
@@ -38,7 +38,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" @click.prevent="logOut">
-            <font-awesome-icon icon="sign-out-alt" /> LogOut
+            <font-awesome-icon icon="sign-out-alt" /> Logout
           </a>
         </li>
       </div>
@@ -70,8 +70,8 @@ export default {
   },
   methods: {
     logOut() {
-      this.$store.dispatch('auth/logout');
-      this.$store.push('/login')
+      this.$store.dispatch('vali/logout');
+      this.$router.push('/login');
     }
   }
 }

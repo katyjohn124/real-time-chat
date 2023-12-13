@@ -1,7 +1,7 @@
 import axios from 'axios';
 import valiHeader from './vali-header';
 
-const API_URL = 'http://localhost:8080/api/test';
+const API_URL = 'http://localhost:8081/api/test/';
 
 class UserService {
     //访问数据：公共内容、用户区、管理员区

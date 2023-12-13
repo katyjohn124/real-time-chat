@@ -88,28 +88,55 @@ export default {
         }
     },
     methods: {
+        // handleRegister(user) {
+        //     //带着数据点击登录后显示加载
+        //     this.loading = true;
+        //     this.message = '';
+        //     this.successful = false;
+
+        //     this.$store.dispatch("vali/register", user)
+        //         .then((data) => {
+        //             this.loading = false;
+        //             this.message = data.message;
+        //             this.successful = true;
+        //         },
+        //             //这个错误处理有三种，首先是找服务器错误消息，二是一般消息，三是把错误消息转成字符串
+        //             (error) => {
+
+        //                 this.message = (error.response && error.response.data && error.response.data.message) ||
+        //                     error.message ||
+        //                     error.toString();
+        //                 this.loading = false;
+        //                 this.successful = false;
+        //             }
+
+        //         )
+        // }
         handleRegister(user) {
-            //带着数据点击登录后显示加载
             this.loading = true;
             this.message = '';
             this.successful = false;
+
             this.$store.dispatch("vali/register", user)
                 .then((data) => {
                     this.loading = false;
                     this.message = data.message;
                     this.successful = true;
-                },
+
+
+                    // 设置延时跳转到登录页面
+                    setTimeout(() => {
+                        this.$router.push('/login');
+                    }, 1000); // 延时1秒后跳转
+                })
+                .catch((error) => {
                     //这个错误处理有三种，首先是找服务器错误消息，二是一般消息，三是把错误消息转成字符串
-                    (error) => {
-
-                        this.message = (error.response && error.response.data && error.response.data.message) ||
-                            error.message ||
-                            error.toString();
-                        this.loading = false;
-                        this.successful = false;
-                    }
-
-                )
+                    this.message = (error.response && error.response.data && error.response.data.message) ||
+                        error.message ||
+                        error.toString();
+                    this.loading = false;
+                    this.successful = false;
+                });
         }
     },
 

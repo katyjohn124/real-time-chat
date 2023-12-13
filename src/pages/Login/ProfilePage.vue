@@ -5,12 +5,12 @@
                 <strong>{{ currentUser.username }}</strong>个人主页
             </h3>
         </header>
-        <p>
+        <p v-if="currentUser && currentUser.accessToken">
             <strong>Token:</strong>
-            {{ currentUser.accessToken.substring(0, 20) }} ... {{
-                currentUser.accessToken.substr(currentUser.accessToken.length
-                    - 20) }}
+            {{ currentUser.accessToken.substring(0, 20) }} ...
+            {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
         </p>
+
         <p>
             <strong>Id:</strong>
             {{ currentUser.id }}
