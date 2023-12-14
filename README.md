@@ -1,6 +1,7 @@
 # real-time-chat-具有登录注册验证的在线实时聊天应用程序。
 
 ## 项目结构树：
+```
 real-time-chat
 ├─ .git
 │  ├─ ... (其他 git 文件和文件夹)
@@ -35,6 +36,7 @@ real-time-chat
 │  ├─ store
 │  └─ verification
 └─ vue.config.js
+```
 
 
 
@@ -99,7 +101,10 @@ real-time-chat
 
 - 喜欢捣鼓项目、喜欢一起学习探讨计算机语言或者喜欢讨论ai技术发展的小伙伴们，欢迎加我联系方式：
 
-![Wechat](imags/微信图片_20231214165100.jpg)
+<img src="https://languagespeak.site/wp-content/uploads/2023/12/微信图片_20231214165100.jpg" alt="Wechat" width="200"/>
+
+
+- GitHub: [katyjohn124](https://github.com/katyjohn124)
 
 
 ## Project setup

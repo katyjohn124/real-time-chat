@@ -9,8 +9,8 @@ class DB {
             this.db = mysql.createConnection({
                 host: "localhost",
                 user: "root",
-                password: "Nongjunyu321@", // 替换为实际的密码
-                database: "real-time-chat", // 确保数据库名称正确
+                password: "your-password", // 替换为你数据库实际的密码
+                database: "your-database-name", // 确保你自己的数据库名称正确,而不是用我的，不然运行失败
             });
             this.db.connect((err) => {
                 if (err) {
